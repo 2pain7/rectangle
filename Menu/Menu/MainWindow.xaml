@@ -1,0 +1,34 @@
+﻿<Window x:Class="Menu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Menu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu x:Name="menu" Margin="0,0,0,360">
+            <MenuItem Header="Size" Height="58" Width="149" Background="DarkGray" Click="MenuItem_Click"/>
+            <MenuItem Header="Color" Height="58" Width="149" Background="DarkGray" Click="MenuItem_Click_1"/>
+            <MenuItem Header="Paint" Height="58" Width="149" Background="DarkGray" Click="MenuItem_Click_3"/>
+            <MenuItem Header="Quit" Height="58" Width="149" Background="DarkGray" Click="MenuItem_Click_2"/>
+        </Menu>
+        <Grid Name="Findsize" Margin="2,57,0,2" Visibility="Hidden"> 
+            <TextBlock HorizontalAlignment="Left" FontSize="16" Margin="189,38,0,0" TextWrapping="Wrap" Text="Введите длину" VerticalAlignment="Top" Height="24" Width="112"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="16" Margin="484,39,0,0" TextWrapping="Wrap" Text="Введите ширину" VerticalAlignment="Top" Height="24" Width="133"/>
+            <TextBox x:Name="aa" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" FontSize="14" Height="50" Margin="186,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="117" AcceptsTab="True"/>
+            <TextBox x:Name="bb" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" FontSize="14" Height="50" Margin="489,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="117" AcceptsTab="True"/>
+        </Grid>
+        <Grid x:Name="Findcolor" Margin="2,58,0,0" Visibility="Hidden">
+            <CheckBox x:Name="red"  Content="Red" HorizontalAlignment="Left" Margin="372,72,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <CheckBox x:Name="green" Content="Green" HorizontalAlignment="Left" Margin="373,103,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <CheckBox x:Name="blue" Content="Blue" HorizontalAlignment="Left" Margin="374,134,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="16" Margin="340,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="133"><Run Text="В"/><Run Text="ыбер"/><Run Text="ите "/><Run Text="цвет"/></TextBlock>
+        </Grid>
+        <Grid x:Name="Paint" Margin="0,60,-1,0" Visibility="Hidden" >
+            <Canvas x:Name="MyCanvas" Margin="86,34,77,76" Height="250" Width="600" Background="Azure">
+            </Canvas>
+            <Button Name="color" Content="Save" HorizontalAlignment="Left" Margin="318,301,0,0" VerticalAlignment="Top" Width="152" Height="35" FontSize="22" Background="LightGreen" Click="color_Click"/>
+        </Grid>
+    </Grid>
+</Window>
